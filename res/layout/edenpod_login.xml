@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30px" />
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="0"
+            android:layout_weight="0.1" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="1"
+            android:background="@drawable/login_button"
+            android:minHeight="@dimen/edenpod_edittext_min_height"
+            android:text="@string/FLICKR_LOGIN"
+            android:textColor="@color/ColorPureWhite"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_column="3"
+            android:layout_weight="0.1" />
+    </TableRow>
+
+    <TableRow android:layout_weight="1" >
+
+        <TextView
+            android:layout_column="0"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp" />
+
+    <ViewStub
+        android:id="@+id/loginStubProgress"
+        android:layout_weight="3"
+        android:inflatedId="@+id/loginShowProgress"
+        android:layout="@layout/loginstubprogress" />
+
+    <ViewStub
+        android:id="@+id/loginStubErrorMsg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="3"
+        android:inflatedId="@+id/loginShowErrorMsg"
+        android:layout="@layout/loginstuberrormsg" />
+
+</TableLayout>
